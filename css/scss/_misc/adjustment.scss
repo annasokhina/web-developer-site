@@ -1,0 +1,75 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: $white;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.4;
+
+	@include fira(regular);
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+
+	&:after {
+		content: "";
+		height: rem($f-height);
+		display: block;
+	}
+}
+
+footer {
+	margin-top: -rem($f-height);
+	position: relative;
+
+	.container {
+		height: rem($f-height);
+		position: relative;
+	}
+}
+
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 10%;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	@include fira(regular);
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+p {
+	margin: 0;
+	color:$black;
+	@include fira(light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	color:$black;
+	@include fira(regular);
+}

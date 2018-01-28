@@ -1,0 +1,108 @@
+.portfolio {
+	@extend %clearfix;
+	padding-left: 8%;
+
+	@include tablet {
+		padding-left: 0;
+	}
+}
+
+.portfolio-title {
+	margin: 0 0 1rem 0;
+
+	@include phone {
+		text-align: center;
+		margin-top: 1.5rem;
+	}
+}
+
+.portfolio-title-text {
+	margin: 0;
+}
+
+.portfolio-item {
+	width: 30.7%;
+	background: #fff;
+	margin: 0 1rem 1.5rem 0;
+	@include border-radius(0.7rem);
+	@include inlineblock();
+	@include box-shadow(0 1px 3px 0 rgba(00, 00, 00, .2));
+	@include transition(0.3s linear .1s);
+
+	&:hover {
+		@include box-shadow(0 3px 10px 0 rgba(00, 00, 00, .2));
+
+		.portfolio-item-name {
+			color: $red;
+		}
+
+		.portfolio-item-preview-pic {
+		-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		transform: scale(1.2);
+		}
+	}
+
+	@include desktop {
+		width: 28%;
+		margin-left: 0.5rem;
+	}
+
+	@include laptop {
+		width: 43%;
+		margin-left: 0.5rem;
+	}
+
+	@include tablet {
+		width: 43%;
+		margin-left: 0.5rem;
+	}
+
+	@include phone {
+		width: 85%;
+		display: block;
+		margin: 0 auto 1.5rem auto;
+	}
+}
+
+.portfolio-item-link {
+	display: block;
+	@include transition(0.3s linear .1s);
+}
+
+.portfolio-item-preview {
+	display: inline-block;
+	overflow: hidden;
+	@include border-radius(0.7rem 0.7rem 0 0);
+
+}
+
+.portfolio-item-preview-pic {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	@include transition(0.8s ease-out .1s);
+}
+
+.portfolio-item-desc {
+	padding: 6%;
+	background: transparent;
+}
+
+.portfolio-item-name {
+	color: $blue;
+
+	@include transition(0.3s linear .1s);
+}
+
+.portfolio-item-topic {
+	font-size: 0.85rem;
+}
+
+.portfolio-item-kind {
+	margin-top: 0.5rem;
+	font-size: 0.9rem;
+	@include fira(regular);
+	color: $grey;
+}

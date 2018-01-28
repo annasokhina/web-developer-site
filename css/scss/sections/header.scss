@@ -1,0 +1,115 @@
+.header {
+	background:#fff;
+	margin-bottom: 3rem;
+
+	@include box-shadow(0 -1px 3px 0 rgba(00, 00, 00, .2));
+	
+	@include tablet {
+		margin-bottom: 1.5rem;
+	}
+
+	.container {
+		height: 5rem;
+		position: relative;
+	}
+}
+
+.logo {
+  float: left;
+  padding-top: 0.5rem;
+}
+
+.logo-pic {
+	@include inlineblock(middle);
+	@include border-radius(50%);
+	overflow: hidden;
+}
+
+.logo-pic-photo {
+	display: block;
+}
+
+.logo-name {
+	@include inlineblock(middle);
+	max-width: 15rem;
+	margin-left: 0.5rem;
+}
+
+.contacts {
+  float: right;
+  padding-top: 1.7rem;
+}
+
+.contacts-tooltip {
+	display: block;
+	position:relative;
+	padding: 0.5rem 0;
+	color: $blue;
+	border-bottom: 1px dotted $blue;
+ 	line-height: 0.5rem;
+
+	@include fira(medium);
+
+	@include transition(0.3s ease-in .1s);
+
+	&:hover, &:focus, &:active {
+		color: $red;
+		border-bottom: 1px dotted $red;
+
+		.contacts-item {
+  			visibility: visible;
+  			opacity: 1;
+  			top: 140%;
+  			left: -100%;
+  			z-index: 999;
+		}
+	}
+
+	&:active {
+		color: $red;
+		border-bottom: 1px dotted $red;
+	}
+}
+
+.contacts-item {
+	position: absolute;
+	width:12rem;
+	padding: 0.5rem 1rem;
+	color: #454545;
+	background: #FFFFFF;
+	border: 1px solid #ddd;
+	line-height: 2.5rem;
+	text-align: left;
+	visibility: hidden;
+	@include border-radius(0.7rem); 
+	@include fira(light);
+
+	.fa {
+		color: $blue;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		margin-left: -0.5rem;
+		width: 0; height: 0;
+		border-bottom: 0.5rem solid #ddd;
+		border-right: 0.5rem solid transparent;
+		border-left: 0.5rem solid transparent;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		margin-left: -0.4rem;
+		width: 0; height: 0;
+		border-bottom: 0.4rem solid #FFFFFF;
+		border-right: 0.4rem solid transparent;
+		border-left: 0.4rem solid transparent;
+	}
+
+}

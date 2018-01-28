@@ -1,0 +1,68 @@
+.sidebar {
+	width: 10rem;
+	float: left;
+	
+	@include tablet {
+		width:100%;
+		float: none;
+		margin-bottom: 1.5rem;
+	}
+	@include phone {
+		width:100%;
+		float: none;
+		margin-bottom: 1.5rem;
+	}
+}
+
+.nav-list-item {
+
+	@include tablet {
+		@include inlineblock(middle);
+	}
+	@include phone {
+		@include inlineblock(middle);
+	}
+}
+
+.nav-list {
+	text-align: right;
+
+	@include tablet {
+		text-align: left;
+	}
+}
+
+.nav-link {
+	display: block;
+	padding: 0.5rem 1.5rem;
+	color: $black;
+	border-right: 4px solid transparent; 
+
+	@include transition(0.3s ease-in .1s);
+
+	@include tablet {
+		padding: 0.5rem;
+		border: none;
+	}
+
+	&:hover {
+		color: $blue;
+		border-color: $lblue;
+
+		@include tablet {
+			padding: 0.5rem;
+		}
+	}
+
+	&:active {
+		color: $blue;
+		border-color: $blue;
+	}
+}
+
+.nav-link-active {
+	color: $blue;
+	border-color: $blue;
+
+	@include fira(medium);
+}

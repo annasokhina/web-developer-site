@@ -1,0 +1,31 @@
+//COLOR VARS
+$red: #e85f61;
+$blue: #33c0e2;
+$lblue: #93dff1;
+$white: #f6f6f6;
+$grey: #727272;
+$black: #414141;
+
+
+//ADJUSTMENT VARS
+$cont-width: 1000px;
+$f-height: 60px;
+
+//layout
+@import "_misc/font-awesome";
+@import "_misc/mixins";
+@import "_misc/adjustment";
+@import "_misc/normalize";
+@import "_misc/fonts";
+
+//section styles
+@import "sections/welcome";
+@import "sections/header";
+@import "sections/sidebar";
+@import "sections/about";
+@import "sections/career";
+@import "sections/portfolio";
+@import "sections/content";
+@import "sections/footer";
+
+

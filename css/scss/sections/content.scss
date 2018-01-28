@@ -1,0 +1,24 @@
+.content {
+	.container {
+		@extend %clearfix;
+	}
+}
+
+.main-section {
+	width: 80%;
+	float: right;
+
+	@include desktop {
+		width: 73%;
+	}
+
+	@include tablet {
+		width: 100%;
+		float: none;
+	}
+
+	@include phone {
+		width: 100%;
+		float: none;
+	}
+}

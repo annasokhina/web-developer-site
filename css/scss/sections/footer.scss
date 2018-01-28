@@ -1,0 +1,36 @@
+.footer {
+	background: $black;
+	text-align: center;
+	line-height: 2rem;
+}
+
+.copyright {
+	color: $grey;
+	float: left;
+	padding-top: 1rem;
+}
+
+.social-list {
+	float: right;
+	padding-top: 1rem;
+}
+
+.social-item {
+	@include inlineblock(middle);
+	padding-right: 1.2rem;
+
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.social-link {
+	font-size: 1.3rem;
+	color: #fff;
+
+	@include transition(0.3s ease-in .1s);
+
+	&:hover {
+		color: $blue;
+	}
+}
