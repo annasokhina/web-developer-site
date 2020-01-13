@@ -1,2 +1,2 @@
 # Web-developer personal website
-<a href="https://sokhann.github.io/web-developer-site/">View</a>
+<a href="https://sokhann.github.io/personal-site-template/">View</a>
